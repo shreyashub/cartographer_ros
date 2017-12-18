@@ -26,8 +26,8 @@
           -configuration_directory $(find cartographer_ros)/configuration_files
           -configuration_basename backpack_3d.lua"
       output="screen">
-    <remap from="points2_1" to="horizontal_laser_3d" />
-    <remap from="points2_2" to="vertical_laser_3d" />
+    <remap from="points2" to="Sensor/points" />
+    <remap from="odom" to="odom/ins" />
   </node>
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
